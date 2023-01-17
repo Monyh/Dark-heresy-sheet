@@ -1,0 +1,840 @@
+.CharDescriptFull, .ArmourFull, .StatSides, .Skills {
+    display: flex;
+    flex-direction: row;
+}
+
+.CharDescript1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 650px;
+    font-size: x-large;
+}
+
+.CharInput {
+    font-size: x-large;
+    height: 30px;
+}
+
+.CharDescript2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 370px;
+    width: 650px;
+    font-size: x-large;
+}
+
+.Apearance {
+    display: flex;
+    flex-direction: row;
+}
+
+#Gender, #Age, #Fat {
+    width: 160px;
+}
+
+#Skin, #Hair {
+    width: 258px;
+}
+
+#Looks {
+    width: 580px; 
+    height: 30px;
+    font-size: x-large;
+    margin-left: 450px;
+    margin-top: 125px;
+}
+
+#Characteristics {
+    margin-left: 310px;
+    margin-top: 20px;
+    font-size: 50px;
+    
+}
+
+#SkillTopText{
+    margin-left: 1310px;
+    margin-top: -60px;
+    font-size: 50px;
+    
+}
+
+.Stats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 150px;
+    margin-left: 250px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.StatNames1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: -160px;
+    margin-top: -10px;
+    width: 100px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#StatNames {
+    margin-bottom: 65px;
+}
+
+.StatNames2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 225px;
+    margin-top: -770px;
+    width: 100px;
+    text-align: center;
+    font-size: xx-large;
+} 
+
+.StatLeft1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: -750px;
+}
+
+#WeaponSkillUpgrade {
+    margin-top: -750px;
+}
+
+#BallisticUpgrade {
+    margin-top: -600px;
+    margin-left: -20px;
+}
+
+#StrengthUpgrade {
+    margin-top: -450px;
+    margin-left: -20px;
+}
+
+#ToughnessUpgrade {
+    margin-top: -300px;
+    margin-left: -20px;
+}
+
+#AgilityUpgrade {
+    margin-top: -150px;
+    margin-left: -20px;
+    z-index: 3;
+}
+
+#IntelligenceUpgrade {
+    width: 10px;
+    margin-top: -850px;
+    margin-left: 48px;
+}
+
+#PerceptionUpgrade {
+    width: 10px;
+    margin-top: -690px;
+    margin-left: -10px;
+}
+
+#WillpowerUpgrade {
+    width: 10px;
+    margin-top: -550px;
+    margin-left: -10px;
+}
+
+#FellowshipUpgrade {
+    width: 10px;
+    margin-top: -400px;
+    margin-left: -10px;
+}
+
+.StatLeft, .StatRight {
+    height: 120px;
+    width: 150px;
+    font-size: 100px;
+    margin-bottom: 27px;
+}
+
+.StatRight1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: -750px;
+    margin-left: 150px;
+}
+
+#IncomeText{
+    margin-left: 20px;
+    margin-top: -275px;
+    font-size: xx-large;
+}
+
+#MoneyText{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: xx-large;
+}
+
+#Income {
+    margin-top: -30px;
+    margin-left: 130px;
+    height: 30px;
+    width: 200px;
+}
+
+#Money {
+    margin-top: -30px;
+    margin-left: 130px;
+    height: 30px;
+    width: 200px;
+}
+
+.Skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 720px;
+    margin-top: -955px;
+    height: 999px;
+}
+
+#SkillsText {
+    height: 0px;
+    width: 300px;
+    font-size: x-large;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-bottom: 39.9px;
+}
+
+.SkillsLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.SkillsRight {
+    display: flex;
+    flex-direction: column;
+    margin-left: 440px;
+    margin-top: -1080px;
+    z-index: 1;
+}
+
+#CommonKnowledge {
+    margin-top: 0px;
+    height: 156px; 
+    width: 240px;
+    font-size: 30px;
+    resize: none;
+}
+
+#ForbidenKnowledge {
+    margin-top: -8px;
+    height: 156px; 
+    width: 240px;
+    font-size: 30px;
+    resize: none;
+}
+
+#Language
+{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 237px; 
+    height: 72px;
+    font-size: 30px;
+    resize: none;
+}
+
+#LearnedKnowledge {
+    margin-top: -5px;
+    margin-left: 0px;
+    height: 193px; 
+    width: 241px;
+    font-size: 30px;
+    resize: none;
+}
+
+#Crafting {
+    margin-top: -2px;
+    margin-left: 0px;
+    height: 115px; 
+    width: 239px;
+    font-size: 30px;
+    resize: none;
+}
+
+.Checks {
+    margin: 6px;
+    margin-bottom: 30px;
+}
+
+.CheckMarks1 {
+    display: block;
+    width: 180px; 
+    height: 993px;
+    margin-left: -50px;
+    margin-top: 5px;
+}
+
+.CheckMarks2 {
+    display: block;
+    margin-left: 720px;
+    margin-top: -1080px;
+    width: 190px; 
+    height: 993px;
+    z-index: 2;
+}
+
+#XP {
+    margin-top: -220px;
+    font-size: 40px;
+    
+}
+
+#Fate {
+    margin-top: -220px;
+    margin-left: 330px;
+    font-size: 40px;
+    
+}
+
+#XP2 {
+    margin-top: -5px;
+    margin-left: -200px;
+    font-size: 35px;
+}
+
+#Fate2 {
+    margin-top: -5px;
+    font-size: 35px;
+}
+
+#SpentXP {
+    margin-top: -40px;
+    margin-left: -650px;
+    font-size: 35px;
+}
+
+#Fate3 {
+    margin-top: -40px;
+    margin-left: 55px;
+    font-size: 35px;
+}
+
+.Exp {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -150px;
+    margin-left: 107px;
+    width: 500px;
+    height: 200px;
+}
+
+#expie {
+    margin-left: 88px;
+    height: 40px;
+    width: 100px;
+    font-size: x-large;
+}
+
+#FateOv {
+    height: 40px;
+    width: 100px;
+    font-size: x-large;
+    margin-top: -92px;
+    margin-left: 335px;
+}
+
+#expieSpend {
+    height: 40px;
+    width: 100px;
+    font-size: x-large;
+    margin-top: -38px;
+    margin-left: 48px;
+}
+
+#FateCurrent {
+    height: 40px;
+    width: 100px;
+    font-size: x-large;
+    margin-left: 335px;
+    margin-top: -95px;
+}
+
+#InsanityText {
+    font-size: 35px;
+    margin-top: -90px;
+}
+
+#CorruptionText {
+    font-size: 35px;
+    margin-top: -90px;
+    margin-left: 330px;
+}
+
+#Insanity {
+    height: 120px;
+    width: 150px;
+    font-size: 100px;
+    margin-left: 0px;
+    margin-top: -50px;
+}
+
+#Corruption {
+    height: 120px;
+    width: 150px;
+    font-size: 100px;
+    margin-left: 300px;
+    margin-top: -120px;
+}
+
+.MalignancesInput {
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+}
+
+#MaligText {
+    margin-right: 260px;
+    margin-left: -150px;
+}
+
+#Malignances {
+    margin-left: -165px;
+    margin-top: 0px;
+    height: 370px; 
+    width: 781px;
+    resize: none;
+    font-size: x-large;
+}
+
+.TalentsTextBox {
+    margin-top: -425px;
+}
+
+#TalentsText {
+    margin-left: 1050px;
+    font-size: 40px;
+    
+}
+
+#TalentsPage {
+    margin-top: 300px;
+    margin-left: 1445px;
+    font-size: 30px;
+}
+
+#Talents {
+    margin-left: 722px;
+    height: 621px; 
+    width: 834px;
+    resize: none;
+    font-size: 30px;
+}
+
+#AptitudesText {
+    margin-top: -250px;
+    margin-left: 65px;
+    font-size: 35px;
+}
+
+#Aptitudes {
+    margin-left: -170px;
+    margin-top: -210px;
+    width: 782px; 
+    height: 212px;
+    resize: none;
+    font-size: 30px;
+}
+
+#WeaponsText {
+    margin-top: 20px;
+    margin-left: 150px;
+    font-size: 50px;
+}
+
+#Weapons {
+    margin-left: -170px;
+    width: 796px; 
+    height: 1271px;
+    resize: none;
+    font-size: 30px;
+}
+
+#ArmourText {
+    margin-top: -1330px;
+    margin-left: 1090px;
+    font-size: 50px;
+}
+
+.ArmourHead {
+    margin-left: 720px;
+    margin-top: -1250px;
+    margin-right: 0px;
+}
+
+#HeadText {
+    margin-left: 250px;
+    font-size: 60px;
+    
+}
+
+#Hea {
+    margin-top: 2px;
+    margin-left: 11px;
+    height: 100px;
+    width: 75px;
+    font-size: 50px;
+}
+
+.ArmourArms {
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+#ArmsRightText {
+    font-size: 45px;
+    
+}
+
+#RigArm {
+    height: 100px;
+    width: 80px;
+    font-size: 50px;
+}
+
+#ArmsLeftText {
+    font-size: 45px;
+    
+    margin-left: 226px;
+}
+
+#LefArm {
+    height: 100px;
+    width: 80px;
+    font-size: 50px;
+    margin-left: 450px;
+    margin-top: -100px;
+}
+
+#LeftArm {
+    margin-right: -100px;
+    margin-top: -46px;
+}
+
+.ArmourBody {
+    margin-left: 295px;
+    margin-top: 70px;
+}
+
+#BodyText {
+    font-size: 60px;
+    
+    margin-left: -50px;
+    margin-right: 10px;
+}
+
+#Bod {
+    height: 100px;
+    width: 80px;
+    font-size: 50px;
+}
+
+.ArmourLegs {
+    margin-left: 130px;
+    margin-top: 200px;
+}
+
+#LegRightText {
+    font-size: 45px;
+    
+    margin-left: -60px;
+}
+
+#RigLeg {
+    height: 100px;
+    width: 80px;
+    font-size: 50px;
+}
+
+#LegLeftText {
+    font-size: 45px;
+    
+    margin-left: 174px;
+}
+
+#LefLeg {
+    height: 100px;
+    width: 80px;
+    font-size: 50px;
+    margin-left: 340px;
+    margin-top: -100px;
+}
+
+.WoundBox {
+    margin-left: px;
+    margin-top: -1320px;
+}
+
+#damage {
+    margin-left: 100px;
+    height: 30px;
+    width: 120px;
+    font-size: 30px;
+}
+
+#WoundsText {
+    margin-left: 100px;
+    font-size: 50px;
+    
+}
+
+#WoundsText1 {
+    margin-left: 25px;
+    font-size: 40px;
+    
+}
+
+#checkwounds {
+    margin-top: -45px;
+    margin-left: 190px;
+    width: 105px;
+    height: 65px;
+    font-size: 40px;
+}
+
+#WoundsText2 {
+    margin-left: 25px;
+    font-size: 40px;
+    
+}
+
+#wounds {
+    margin-top: -45px;
+    margin-left: 190px;
+    width: 105px;
+    height: 65px;
+    font-size: 40px;
+}
+
+#WoundsText3 {
+    margin-left: 25px;
+    font-size: 40px;
+    
+}
+
+#Status {
+    margin-top: -45px;
+    margin-left: 190px;
+    width: 105px;
+    height: 65px;
+    font-size: 40px;
+}
+
+#WoundsText4 {
+    margin-left: 70px;
+    font-size: 40px;
+}
+
+#State {
+    margin-top: 0px;
+    margin-left: 16px;
+    font-size: 30px;
+    width: 277px; 
+    height: 460px;
+    resize: none;
+}
+
+.movement {
+    margin-left: 60px;
+    margin-top: -410px;
+}
+
+#MovementText {
+    font-size: 40px;
+    margin-left: -600px;
+    
+}
+
+#PartialText {
+    font-size: 40px;
+    margin-left: -830px;
+    margin-top: 5px;
+}
+
+#Partial {
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: -618px;
+    margin-top: -40px;
+}
+
+#PushText {
+    font-size: 40px;
+    margin-left: -450px;
+    margin-top: -50px;
+}
+
+#Push {
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: -274px;
+    margin-top: -35px;
+}
+
+#FullText {
+    font-size: 40px;
+    margin-left: -820px;
+    margin-top: 15px;
+}
+
+#Full {
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: -618px;
+    margin-top: -47px;
+}
+
+#RunText {
+    font-size: 40px;
+    margin-left: -410px;
+    margin-top: -50px;
+}
+
+#Run {
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: -274px;
+    margin-top: -40px;
+}
+
+#FatigueText {
+    font-size: 30px;
+    margin-left: -880px;
+    margin-top: -180px;
+}
+
+#Fatigue {
+    margin-top: -38px;
+    margin-left: -230px;
+    font-size: 30px;
+    width: 140px; 
+    height: 38px;
+    resize: none;
+}
+
+#PsyText {
+    font-size: 40px;
+    margin-left: -800px;
+    margin-top: -100px;
+    
+}
+
+#PsyText1 {
+    font-size: 40px;
+    margin-left: -480px;
+    margin-top: -50px;
+    
+}
+
+#Psy {
+    margin-top: -40px;
+    margin-left: -240px;
+    font-size: 35px;
+    width: 78px; 
+    height: 45px;
+    resize: none;
+}
+
+.Misc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#PsyPowersText {
+    font-size: 40px;
+    margin-left: 1420px;
+}
+
+#PsyPowers {
+    margin-left: 720px;
+    font-size: 30px;
+    width: 864px; 
+    height: 369px;
+    resize: none;
+}
+
+#SpecialPowersText {
+    margin-left: 999px;
+    margin-top: 55px;
+    font-size: 30px;
+}
+
+#SpecialPowers {
+    margin-left: 730px;
+    font-size: 30px;
+    width: 867px; 
+    height: 481px;
+    resize: none;
+}
+
+#EquipmentText {
+    margin-top: -940px;
+    margin-left: 130px;
+    font-size: 40px;
+    
+}
+
+#EquipmentWeight {
+    font-size: 30px;
+    margin-top: 54px;
+    margin-left: 450px;
+}
+
+#Equipment {
+    margin-left: -195px;
+    font-size: 30px;
+    width: 826px; 
+    height: 728px;
+    resize: none;
+}
+
+#WeightText {
+    margin-top: -75px;
+    margin-left: -800px;
+    font-size: 25px;
+}
+
+#WeightText1 {
+    margin-left: -800px;
+    font-size: 25px;
+}
+
+#Weight {
+    margin-top: -60px;
+    margin-left: -500px;
+    font-size: 26px;
+    width: 244px; 
+    height: 72px;
+    resize: none;
+}
+
+input, textarea {
+background-color: rgba(0,0,0,0.1);
+color: black;
+border: none;
+}
+
+#background {
+    background-image: url('SheetBackground.jpg');
+    background-repeat: repeat;
+    padding: 0px;
+    margin: 0px;
+    background-size: auto;
+} 

@@ -1,0 +1,825 @@
+<html>
+<head>
+<link href="Style.css" rel="stylesheet">
+</head>
+<body id="background">
+
+<div class="CharDescriptFull">
+
+<div class="CharDescript1">
+<text class="lang lang-ua">Імя персонажа</text>
+<text class="lang lang-en">Character Name</text> 
+<input type="text" class="CharInput" id="CharName">
+
+<text class="lang lang-ua">Рідний світ</text> 
+<text class="lang lang-en">Home World</text> 
+<input type="text" class="CharInput" id="CharWorld">
+
+<text class="lang lang-ua">Біография</text> 
+<text class="lang lang-en">Background</text> 
+<input type="text" class="CharInput" id="CharBiography">
+
+<text class="lang lang-ua">Роль</text> 
+<text class="lang lang-en">Role</text> 
+<input type="text" class="CharInput" id="CharRole">
+
+<text class="lang lang-ua">Єлітні покращення</text> 
+<text class="lang lang-en">Elite Advances</text> 
+<input type="text" class="CharInput" id="CharAdvances">
+
+<text class="lang lang-ua">Пророцтво</text> 
+<text class="lang lang-en">Divination</text>
+<input type="text" class="CharInput" id="CharDivination">
+
+<text class="lang lang-ua">Нотатки</text> 
+<text class="lang lang-en">Notes</text>
+<textarea style="resize:none" class="CharInput" id="CharNotes"></textarea>
+</div>
+
+<div class="CharDescript2">
+    <select id="langSelector" style="width: 70px;">
+        <option value="en">English</option>
+        <option value="ua">Українська</option>
+    </select>
+
+    <button onclick="save()">Save</button>
+    <button onclick="load()">Load</button>
+
+    <div class="Apearance">
+    <text class="lang lang-ua">Пол</text> 
+    <text class="lang lang-en">Gender</text>
+    <input type="text" class="CharInput" id="Gender" id="CharGender">
+
+    <text class="lang lang-ua">Вік</text>
+    <text class="lang lang-en">Age</text>
+    <input type="text" class="CharInput" id="Age" id="CharAge">
+
+    <text class="lang lang-ua">Рост/Вага</text> 
+    <text class="lang lang-en">Build</text>
+    <input type="text" class="CharInput" id="Fat" id="CharFat">
+    </div>
+
+    <div class="Apearance">
+    <text class="lang lang-ua">Шкіра</text> 
+    <text class="lang lang-en">Complexion</text>
+    <input type="text" class="CharInput" id="Skin" id="CharSkin">
+
+    <text class="lang lang-ua">Волося</text> 
+    <text class="lang lang-en">Hair</text>
+    <input type="text" class="CharInput" id="Hair" id="CharHair">
+    </div>
+
+    <text class="lang lang-ua">Особливості</text> 
+    <text class="lang lang-en">Quirks</text>
+    <input type="text" class="CharInput" id="CharQuirks">
+
+    <text class="lang lang-ua">Марновірство</text> 
+    <text class="lang lang-en">Superstitions</text>
+    <input type="text" class="CharInput" id="CharSupersitions">
+
+    <text class="lang lang-ua">Памятна річ</text>
+    <text class="lang lang-en">Momentos</text>
+    <input type="text" class="CharInput" id="CharMementos">
+
+    <text class="lang lang-ua">Союзники</text> 
+    <text class="lang lang-en">Allies</text>
+    <input type="text" class="CharInput" id="CharAllies">
+
+    <text class="lang lang-ua">Вороги</text> 
+    <text class="lang lang-en">Enemies</text>
+    <input type="text" class="CharInput" id="CharEnemies">
+    </div>
+</div>
+
+<div id="Characteristics">
+    <text class="lang lang-ua">Характеристики</text>
+    <text class="lang lang-en">Characteristics</text>
+</div>
+
+<div id="SkillTopText">
+    <text class="lang lang-ua">Вміння</text>
+    <text class="lang lang-en">Skills</text>
+</div>
+
+<div class="Stats">
+    <div class="StatNames1">
+        <text id="StatNames" class="lang lang-ua">Близький Бій (ББ)</text>
+        <text id="StatNames" class="lang lang-en">Weapon Skill (WS)</text>
+        <text id="StatNames" class="lang lang-ua">Балістика (Б)</text>
+        <text id="StatNames" class="lang lang-en">Ballistic Skill (BS)</text>
+        <text id="StatNames" class="lang lang-ua">Сила (Сил)</text>
+        <text id="StatNames" class="lang lang-en">Strength (S)</text>
+        <text id="StatNames" class="lang lang-ua" style="font-size: x-large; margin-bottom: 95px;">Витривалість (Вит)</text>
+        <text id="StatNames" class="lang lang-en">Toughness (T)</text>
+        <text id="StatNames" class="lang lang-ua">Вправність (Впа)</text>
+        <text id="StatNames" class="lang lang-en">Agility (AG)</text>
+    </div>
+
+<div class="StatSides">
+    <div class="StatLeft1">
+    <input type="text" id="Weapon" class="StatLeft">
+    <input type="text" id="Ballistic" class="StatLeft">
+    <input type="text" id="Str" class="StatLeft">
+    <input type="text" id="Tough" class="StatLeft">
+    <input type="text" id="Ag" class="StatLeft">
+</div>
+
+<div id="WeaponSkillUpgrade">
+    <input type="checkbox" id="ch1" class="checkAll">
+    <input type="checkbox" id="ch2" class="checkAll">
+    <input type="checkbox" id="ch3" class="checkAll">
+    <input type="checkbox" id="ch4" class="checkAll">
+    <input type="checkbox" id="ch5" class="checkAll">
+</div>
+
+<div id="BallisticUpgrade">
+    <input type="checkbox" id="ch6">
+    <input type="checkbox" id="ch7">
+    <input type="checkbox" id="ch8">
+    <input type="checkbox" id="ch9">
+    <input type="checkbox" id="ch10">
+</div>
+
+<div id="StrengthUpgrade">
+    <input type="checkbox" id="ch11">
+    <input type="checkbox" id="ch12">
+    <input type="checkbox" id="ch13">
+    <input type="checkbox" id="ch14">
+    <input type="checkbox" id="ch15">
+</div>
+
+<div id="AgilityUpgrade">
+    <input type="checkbox" id="ch16">
+    <input type="checkbox" id="ch17">
+    <input type="checkbox" id="ch18">
+    <input type="checkbox" id="ch19">
+    <input type="checkbox" id="ch20">
+</div>
+
+<div id="ToughnessUpgrade">
+    <input type="checkbox" id="ch21">
+    <input type="checkbox" id="ch22">
+    <input type="checkbox" id="ch23">
+    <input type="checkbox" id="ch24">
+    <input type="checkbox" id="ch25">
+</div>
+
+    <div class="StatRight1">
+    <input type="text" id="Int" class="StatRight">
+    <input type="text" id="Per" class="StatRight">
+    <input type="text" id="Will" class="StatRight">
+    <input type="text" id="Fel" class="StatRight">
+
+</div>
+</div>
+
+<div class="Stats">
+    <div class="StatNames2">
+        <text id="StatNames" class="lang lang-ua">Інтелект (Інт)</text>
+        <text id="StatNames" class="lang lang-en">Intelligence (Int)</text>
+        <text id="StatNames" class="lang lang-ua" style="font-size: x-large; margin-bottom: 80px;">Сприйняття (Спр)</text>
+        <text id="StatNames" class="lang lang-en">Perception (Per)</text>
+        <text id="StatNames" class="lang lang-ua">Сила Волі (СилВ)</text>
+        <text id="StatNames" class="lang lang-en">Willpower (WP)</text>
+        <text id="StatNames" class="lang lang-ua" style="font-size: x-large;">Товариство (Тов)</text>
+        <text id="StatNames" class="lang lang-en">FellowShip (Fel)</text>
+    </div>
+
+    <div id="IntelligenceUpgrade">
+        <input type="checkbox" id="ch26">
+        <input type="checkbox" id="ch27">
+        <input type="checkbox" id="ch28">
+        <input type="checkbox" id="ch29">
+        <input type="checkbox" id="ch30">
+    </div>
+    
+    <div id="PerceptionUpgrade">
+        <input type="checkbox" id="ch31">
+        <input type="checkbox" id="ch32">
+        <input type="checkbox" id="ch33">
+        <input type="checkbox" id="ch34">
+        <input type="checkbox" id="ch35">
+    </div>
+    
+    <div id="WillpowerUpgrade">
+        <input type="checkbox" id="ch36">
+        <input type="checkbox" id="ch37">
+        <input type="checkbox" id="ch38">
+        <input type="checkbox" id="ch39">
+        <input type="checkbox" id="ch40">
+    </div>
+    
+    <div id="FellowshipUpgrade">
+        <input type="checkbox" id="ch41">
+        <input type="checkbox" id="ch42">
+        <input type="checkbox" id="ch43">
+        <input type="checkbox" id="ch44">
+        <input type="checkbox" id="ch45">
+    </div>
+
+    <div>
+        <div id="IncomeText">
+        <text class="lang lang-ua">Доход:</text>
+        <text class="lang lang-en">Income:</text>
+    </div>
+        <input type="text" id="Income">
+        <div id="MoneyText">
+        <text class="lang lang-ua">Гроші:</text>
+        <text class="lang lang-en">Money:</text>
+    </div>
+        <input type="text" id="Money">
+    </div>
+</div>
+
+<div class="Skills">
+<div class="SkillsLeft">
+    <text id="SkillsText" class="lang lang-ua">Акробатика (Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Acrobatics (Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Атлетика (Сил)</text>
+    <text id="SkillsText" class="lang lang-en">Athletics (S)</text>
+    <text id="SkillsText" class="lang lang-ua">Пильність (Спр)</text>
+    <text id="SkillsText" class="lang lang-en">Awareness (Per)</text>
+    <text id="SkillsText" class="lang lang-ua">Зваблення (Тов)</text>
+    <text id="SkillsText" class="lang lang-en">Charm (Fel)</text>
+    <text id="SkillsText" class="lang lang-ua">Командування (Тов)</text>
+    <text id="SkillsText" class="lang lang-en">Command (Fel)</text>
+    <text id="SkillsText" class="lang lang-ua">Оцінка (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Commerce (Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Звичайне знання (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Common Lore (Int)</text>
+    <textarea id="CommonKnowledge"></textarea>
+
+    <text id="SkillsText" class="lang lang-ua">Обман (Тов)</text>
+    <text id="SkillsText" class="lang lang-en">Deceive (Fel)</text>
+    <text id="SkillsText" class="lang lang-ua">Ухилення (Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Dodge (Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Заборонене знання (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Forbidden Lore (Int)</text>
+    <textarea id="ForbidenKnowledge"></textarea>
+
+    <text id="SkillsText" class="lang lang-ua">Збір інформації (Тов)</text>
+    <text id="SkillsText" class="lang lang-en">Inquiry (Fel)</text>
+    <text id="SkillsText" class="lang lang-ua">Допит (СилВ)</text>
+    <text id="SkillsText" class="lang lang-en">Interrogation (WP)</text>
+    <text id="SkillsText" class="lang lang-ua">Залякування (Сил)</text>
+    <text id="SkillsText" class="lang lang-en">Intimidate (S)</text>
+    <text id="SkillsText" class="lang lang-ua">Мова (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Linguistics (Int)</text>
+    <textarea id="Language"></textarea>
+    <text id="SkillsText" class="lang lang-ua">Логіка (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Logic (Int)</text>
+</div>
+
+<div class="CheckMarks1">
+   <div> 
+    <input type="checkbox" class="Checks" id="ch46">
+    <input type="checkbox" class="Checks" id="ch46">
+    <input type="checkbox" class="Checks" id="ch46">
+    <input type="checkbox" class="Checks" id="ch48">
+   </div>
+   <div> 
+    <input type="checkbox" class="Checks" id="ch49">
+    <input type="checkbox" class="Checks" id="ch50">
+    <input type="checkbox" class="Checks" id="ch51">
+    <input type="checkbox" class="Checks" id="ch52">
+   </div>
+   <div> 
+    <input type="checkbox" class="Checks" id="ch53">
+    <input type="checkbox" class="Checks" id="ch54">
+    <input type="checkbox" class="Checks" id="ch55">
+    <input type="checkbox" class="Checks" id="ch56">
+   </div>
+   <div> 
+    <input type="checkbox" class="Checks" id="ch57">
+    <input type="checkbox" class="Checks" id="ch58">
+    <input type="checkbox" class="Checks" id="ch59">
+    <input type="checkbox" class="Checks" id="ch60">
+   </div>
+   <div> 
+    <input type="checkbox" class="Checks" id="ch61">
+    <input type="checkbox" class="Checks" id="ch62">
+    <input type="checkbox" class="Checks" id="ch63">
+    <input type="checkbox" class="Checks" id="ch64">
+   </div>
+   <div> 
+    <input type="checkbox" class="Checks" id="ch65">
+    <input type="checkbox" class="Checks" id="ch66">
+    <input type="checkbox" class="Checks" id="ch67">
+    <input type="checkbox" class="Checks" id="ch68">
+   </div>
+
+   <div style="margin-top: 30px;"> 
+    <input type="checkbox" class="Checks" id="ch69">
+    <input type="checkbox" class="Checks" id="ch70">
+    <input type="checkbox" class="Checks" id="ch71">
+    <input type="checkbox" class="Checks" id="ch72">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch73">
+    <input type="checkbox" class="Checks" id="ch74">
+    <input type="checkbox" class="Checks" id="ch75">
+    <input type="checkbox" class="Checks" id="ch76">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch77">
+    <input type="checkbox" class="Checks" id="ch78">
+    <input type="checkbox" class="Checks" id="ch79">
+    <input type="checkbox" class="Checks" id="ch80">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch81">
+    <input type="checkbox" class="Checks" id="ch82">
+    <input type="checkbox" class="Checks" id="ch83">
+    <input type="checkbox" class="Checks" id="ch84">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch85">
+    <input type="checkbox" class="Checks" id="ch68">
+    <input type="checkbox" class="Checks" id="ch87">
+    <input type="checkbox" class="Checks" id="ch88">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch89">
+    <input type="checkbox" class="Checks" id="ch90">
+    <input type="checkbox" class="Checks" id="ch91">
+    <input type="checkbox" class="Checks" id="ch92">
+   </div>
+
+   <div style="margin-top: 30px;"> 
+    <input type="checkbox" class="Checks" id="ch93">
+    <input type="checkbox" class="Checks" id="ch94">
+    <input type="checkbox" class="Checks" id="ch95">
+    <input type="checkbox" class="Checks" id="ch96">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch97">
+    <input type="checkbox" class="Checks" id="ch98">
+    <input type="checkbox" class="Checks" id="ch99">
+    <input type="checkbox" class="Checks" id="ch100">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch101">
+    <input type="checkbox" class="Checks" id="ch102">
+    <input type="checkbox" class="Checks" id="ch103">
+    <input type="checkbox" class="Checks" id="ch104">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch105">
+    <input type="checkbox" class="Checks" id="ch106">
+    <input type="checkbox" class="Checks" id="ch107">
+    <input type="checkbox" class="Checks" id="ch108">
+   </div>
+   <div style="margin-top: -4px;"> 
+    <input type="checkbox" class="Checks" id="ch109">
+    <input type="checkbox" class="Checks" id="ch110">
+    <input type="checkbox" class="Checks" id="ch111">
+    <input type="checkbox" class="Checks" id="ch112">
+   </div>
+   <div style="margin-top: -4px;"> 
+    <input type="checkbox" class="Checks" id="ch113">
+    <input type="checkbox" class="Checks" id="ch114">
+    <input type="checkbox" class="Checks" id="ch115">
+    <input type="checkbox" class="Checks" id="ch116">
+   </div>
+   <div style="margin-top: -4px;"> 
+    <input type="checkbox" class="Checks" id="ch117">
+    <input type="checkbox" class="Checks" id="ch118">
+    <input type="checkbox" class="Checks" id="ch119">
+    <input type="checkbox" class="Checks" id="ch120">
+   </div>
+
+   <div style="margin-top: 35px;"> 
+    <input type="checkbox" class="Checks" id="ch121">
+    <input type="checkbox" class="Checks" id="ch122">
+    <input type="checkbox" class="Checks" id="ch123">
+    <input type="checkbox" class="Checks" id="ch124">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch125">
+    <input type="checkbox" class="Checks" id="ch126">
+    <input type="checkbox" class="Checks" id="ch127">
+    <input type="checkbox" class="Checks" id="ch128">
+   </div>
+   <div style="margin-top: -8px;"> 
+    <input type="checkbox" class="Checks" id="ch129">
+    <input type="checkbox" class="Checks" id="ch130">
+    <input type="checkbox" class="Checks" id="ch132">
+    <input type="checkbox" class="Checks" id="ch133">
+   </div>
+</div>
+
+<div class="CheckMarks2">
+    <div> 
+        <input type="checkbox" class="Checks" id="ch134">
+        <input type="checkbox" class="Checks" id="ch135">
+        <input type="checkbox" class="Checks" id="ch136">
+        <input type="checkbox" class="Checks" id="ch137">
+    </div>
+    <div> 
+        <input type="checkbox" class="Checks" id="ch138">
+        <input type="checkbox" class="Checks" id="ch139">
+        <input type="checkbox" class="Checks" id="ch140">
+        <input type="checkbox" class="Checks" id="ch141">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch142">
+        <input type="checkbox" class="Checks" id="ch143">
+        <input type="checkbox" class="Checks" id="ch144">
+        <input type="checkbox" class="Checks" id="ch145">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch146">
+        <input type="checkbox" class="Checks" id="ch147">
+        <input type="checkbox" class="Checks" id="ch148">
+        <input type="checkbox" class="Checks" id="ch149">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch150">
+        <input type="checkbox" class="Checks" id="ch151">
+        <input type="checkbox" class="Checks" id="ch152">
+        <input type="checkbox" class="Checks" id="ch153">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch154">
+        <input type="checkbox" class="Checks" id="ch155">
+        <input type="checkbox" class="Checks" id="ch156">
+        <input type="checkbox" class="Checks" id="ch157">
+     </div>
+     <div style="margin-top: -4px;"> 
+        <input type="checkbox" class="Checks" id="ch158">
+        <input type="checkbox" class="Checks" id="ch159">
+        <input type="checkbox" class="Checks" id="ch160">
+        <input type="checkbox" class="Checks" id="ch161">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch162">
+        <input type="checkbox" class="Checks" id="ch163">
+        <input type="checkbox" class="Checks" id="ch164">
+        <input type="checkbox" class="Checks" id="ch165">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch166">
+        <input type="checkbox" class="Checks" id="ch167">
+        <input type="checkbox" class="Checks" id="ch168">
+        <input type="checkbox" class="Checks" id="ch169">
+     </div>
+
+     <div style="margin-top: 30px;"> 
+        <input type="checkbox" class="Checks" id="ch170">
+        <input type="checkbox" class="Checks" id="ch171">
+        <input type="checkbox" class="Checks" id="ch172">
+        <input type="checkbox" class="Checks" id="ch173">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch174">
+        <input type="checkbox" class="Checks" id="ch175">
+        <input type="checkbox" class="Checks" id="ch176">
+        <input type="checkbox" class="Checks" id="ch177">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch178">
+        <input type="checkbox" class="Checks" id="ch179">
+        <input type="checkbox" class="Checks" id="ch180">
+        <input type="checkbox" class="Checks" id="ch181">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch182">
+        <input type="checkbox" class="Checks" id="ch183">
+        <input type="checkbox" class="Checks" id="ch184">
+        <input type="checkbox" class="Checks" id="ch185">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch186">
+        <input type="checkbox" class="Checks" id="ch187">
+        <input type="checkbox" class="Checks" id="ch188">
+        <input type="checkbox" class="Checks" id="ch189">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch190">
+        <input type="checkbox" class="Checks" id="ch191">
+        <input type="checkbox" class="Checks" id="ch192">
+        <input type="checkbox" class="Checks" id="ch193">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch194">
+        <input type="checkbox" class="Checks" id="ch195">
+        <input type="checkbox" class="Checks" id="ch196">
+        <input type="checkbox" class="Checks" id="ch197">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch198">
+        <input type="checkbox" class="Checks" id="ch199">
+        <input type="checkbox" class="Checks" id="ch200">
+        <input type="checkbox" class="Checks" id="ch201">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch202">
+        <input type="checkbox" class="Checks" id="ch203">
+        <input type="checkbox" class="Checks" id="ch204">
+        <input type="checkbox" class="Checks" id="ch205">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch206">
+        <input type="checkbox" class="Checks" id="ch207">
+        <input type="checkbox" class="Checks" id="ch208">
+        <input type="checkbox" class="Checks" id="ch209">
+     </div>
+     <div> 
+        <input type="checkbox" class="Checks" id="ch210">
+        <input type="checkbox" class="Checks" id="ch211">
+        <input type="checkbox" class="Checks" id="ch212">
+        <input type="checkbox" class="Checks" id="ch213">
+     </div>
+
+     <div style="margin-top: 30px;"> 
+        <input type="checkbox" class="Checks" id="ch214">
+        <input type="checkbox" class="Checks" id="ch215">
+        <input type="checkbox" class="Checks" id="ch216">
+        <input type="checkbox" class="Checks" id="ch217">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch218">
+        <input type="checkbox" class="Checks" id="ch219">
+        <input type="checkbox" class="Checks" id="ch220">
+        <input type="checkbox" class="Checks" id="ch221">
+     </div>
+     <div style="margin-top: -8px;"> 
+        <input type="checkbox" class="Checks" id="ch222">
+        <input type="checkbox" class="Checks" id="ch223">
+        <input type="checkbox" class="Checks" id="ch224">
+        <input type="checkbox" class="Checks" id="ch225">
+     </div>
+
+</div>
+<div class="SkillsRight">
+    <text id="SkillsText" class="lang lang-ua">Медика (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Medicae (Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Навігація (Земля)(Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Navigate (Surface)(Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Навігація (Космос)(Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Navigate (Stellar)(Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Навігація (Варп)(Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Navigate (Warp)(Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Водіння (Воздух)(Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Operate (Aeronautica)(Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Водіння (Земля)(Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Operate (Surface)(Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Водіння (Космос)(Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Operate (Voidship)(Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Парирование (ББ)</text>
+    <text id="SkillsText" class="lang lang-en">Parry (WS)</text>
+    <text id="SkillsText" class="lang lang-ua">Псі чутя (Спр)</text>
+    <text id="SkillsText" class="lang lang-en">Psyniscience (Per)</text>
+    <text id="SkillsText" class="lang lang-ua">Ученне знання (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Scholastic Lore (Int)</text>
+    <textarea id="LearnedKnowledge"></textarea>
+
+    <text id="SkillsText" class="lang lang-ua">Проникливість (Спр)</text>
+    <text id="SkillsText" class="lang lang-en">Scrutiny (Per)</text>
+    <text id="SkillsText" class="lang lang-ua">Безпека (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Security (Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Вправність Рук (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Sleight of Hand (Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Безшумний Шаг (Інт)</text>
+    <text id="SkillsText" class="lang lang-en">Stealth (Ag)</text>
+    <text id="SkillsText" class="lang lang-ua">Виживання (Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Survival (Per)</text>
+    <text id="SkillsText" class="lang lang-ua">Технологія (Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Tech-Use (Int)</text>
+    <text id="SkillsText" class="lang lang-ua">Ремесло (Впа)</text>
+    <text id="SkillsText" class="lang lang-en">Trade (Int)</text>
+    <textarea id="Crafting"></textarea>
+</div>
+</div>
+
+<text id="XP" class="lang lang-ua">Досвід</text>
+<text id="XP" class="lang lang-en">Experience</text>
+<text id="Fate" class="lang lang-ua">Судьба</text>
+<text id="Fate" class="lang lang-en">Fate</text>
+
+<div class="Exp">
+    <text id="XP2" class="lang lang-ua">Досвід</text>
+    <text id="XP2" class="lang lang-en">Experience</text>
+    <input id="expie" type="text">
+
+    <text id="Fate2" class="lang lang-ua">Загалом</text>
+    <text id="Fate2" class="lang lang-en">Threshold</text>
+    <input id="FateOv" type="text">
+
+    <text id="SpentXP" class="lang lang-ua">Потрачено</text>
+    <text id="SpentXP" class="lang lang-en">Total XP Spent</text>
+    <input id="expieSpend" type="text">
+
+    <text id="Fate3" class="lang lang-ua">Мається</text>
+    <text id="Fate3" class="lang lang-en">Current</text>
+    <input id="FateCurrent" type="text">
+</div>
+
+    <text id="InsanityText" class="lang lang-ua">Божевілля</text>
+    <text id="InsanityText" class="lang lang-en">Insanity</text>
+    <text id="CorruptionText" class="lang lang-ua">Порча</text>
+    <text id="CorruptionText" class="lang lang-en">Corruption</text>
+<div class="InsCor">
+    <input type="text" id="Insanity">
+    <input type="text" id="Corruption">
+</div>
+
+<div class="MalignancesInput">
+<text id="MaligText" class="lang lang-ua">Безумства</text>
+<text id="MaligText" class="lang lang-en">Disorders</text>
+<text id="MaligText" class="lang lang-ua">Опоганювання</text>
+<text id="MaligText" class="lang lang-en">Malignances</text>
+<text id="MaligText" class="lang lang-ua">Мутації</text>
+<text id="MaligText" class="lang lang-en">Mutations</text>
+</div>
+
+<div>
+    <textarea id="Malignances"></textarea>
+</div>
+
+<div>
+    <div class="TalentsTextBox">
+    <text id="TalentsText" class="lang lang-ua">Таланти</text>
+    <text id="TalentsText" class="lang lang-en">Talents</text>
+</div>
+
+    <text id="TalentsPage" class="lang lang-ua">Сторінка</text>
+    <text id="TalentsPage" class="lang lang-en">Page</text>
+
+    <textarea id="Talents"></textarea>
+</div>
+
+<text id="AptitudesText" class="lang lang-ua">Схильністі</text>
+<text id="AptitudesText" class="lang lang-en">Aptitudes</text>
+<div>
+    <textarea id="Aptitudes"></textarea>
+</div>
+
+<text id="WeaponsText" class="lang lang-ua">Зброя</text>
+<text id="WeaponsText" class="lang lang-en">Weapons</text>
+<div>
+<textarea id="Weapons"></textarea>
+</div>
+
+<text id="ArmourText" class="lang lang-ua">Броня</text>
+<text id="ArmourText" class="lang lang-en">Armour</text>
+<div class="ArmourFull">
+<div class="ArmourHead">
+    <text id="HeadText" class="lang lang-ua">Г</text>
+    <text id="HeadText" class="lang lang-en">H</text>
+    <input type="number" id="Hea" class="HitZone">
+<input type="checkbox" id="Head">
+
+<div class="ArmourArms">
+    <text id="ArmsRightText" class="lang lang-ua">Пр</text>
+    <text id="ArmsRightText" class="lang lang-en">Ra</text>
+    <input type="number" id="RigArm" class="HitZone">
+<input type="checkbox" id="RightArm">
+
+<text id="ArmsLeftText" class="lang lang-ua">Лр</text>
+<text id="ArmsLeftText" class="lang lang-en">La</text>
+<input type="checkbox" id="LeftArm" style="margin-left: 375px;">
+    <input type="number" id="LefArm" class="HitZone">
+</div>
+
+<div class="ArmourBody">
+    <text id="BodyText" class="lang lang-ua">Т</text>
+    <text id="BodyText" class="lang lang-en">T</text>
+<input type="number" id="Bod" class="HitZone">
+<input type="checkbox" id="Body">
+</div>
+
+<div class="ArmourLegs">
+    <text id="LegRightText" class="lang lang-ua">Пн</text>
+    <text id="LegRightText" class="lang lang-en">Rl</text>
+    <input type="number" id="RigLeg" class="HitZone">
+<input type="checkbox" id="RightLeg">
+
+<text id="LegLeftText" class="lang lang-ua">Лн</text>
+<text id="LegLeftText" class="lang lang-en">Ll</text>
+<input type="checkbox" id="LeftLeg" style="margin-left: 260px; margin-top: -50px;">
+    <input type="number" id="LefLeg" class="HitZone">
+
+</div>
+</div>
+
+<div class="WoundBox">
+<input type="number" id="damage" placeholder="Damage">
+<button onclick="applyDamage()" style="margin-left: 110px;">Apply Damage</button>
+<text id="WoundsText" class="lang lang-ua">Рани</text>
+<text id="WoundsText" class="lang lang-en">Wounds</text>
+
+<text id="WoundsText1" class="lang lang-ua">Загалом:</text>
+<text id="WoundsText1" class="lang lang-en">Total:</text>
+<input type="number" id="checkwounds">
+<text id="WoundsText2" class="lang lang-ua">Мається:</text>
+<text id="WoundsText2" class="lang lang-en">Current:</text>
+<input type="number" id="wounds">
+<text id="WoundsText3" class="lang lang-ua">Ураз:</text>
+<text id="WoundsText3" class="lang lang-en">Damage:</text>
+<input type="text" id="Status">
+<text id="WoundsText4" class="lang lang-ua">Стан</text>
+<text id="WoundsText4" class="lang lang-en">Conditions</text>
+<textarea id="State"></textarea>
+</div>
+
+<div class="movement">
+    <text id="MovementText" class="lang lang-ua">Рух</text>
+    <text id="MovementText" class="lang lang-en">Movement</text>
+<div id="PartialText">
+    <text class="lang lang-ua">Часткове</text>
+    <text class="lang lang-en">Half</text>
+</div>
+    <input type="text" id="Partial">
+
+<div id="PushText">
+    <text class="lang lang-ua">Натиск</text>
+    <text class="lang lang-en">Charge</text>
+</div>
+    <input type="text" id="Push">
+
+<div>
+
+<div id="FullText">
+    <text class="lang lang-ua">Повне</text>
+    <text class="lang lang-en">Full</text>
+</div>
+    <input type="text" id="Full">
+
+<div id="RunText">
+    <text class="lang lang-ua">Біг</text>
+    <text class="lang lang-en">Run</text>
+</div>
+    <input type="text" id="Run">
+</div>
+</div>
+
+<div>
+
+    <div id="FatigueText">
+        <text class="lang lang-ua">Макс.Утомленість(Б.Вит + Б.СилВ) / Утомленість:</text>
+        <text class="lang lang-en">Fatigue Threshold:(TB+WPB) / Fatigue:</text>
+    </div>
+    <textarea id="Fatigue"></textarea>
+</div>
+
+<div>
+    <div id="PsyText">
+        <text class="lang lang-ua">Псі Сили</text>
+        <text class="lang lang-en">Psy Powers</text>
+    </div>
+    <div id="PsyText1">
+        <text class="lang lang-ua">Псі Рейтинг:</text>
+        <text class="lang lang-en">Psy rating:</text>
+    </div>
+    <textarea id="Psy"></textarea>
+</div>
+
+</div>
+
+<div class="Misc">
+<div>
+    <div id="PsyPowersText">
+        <text class="lang lang-ua">Сторінка</text>
+        <text class="lang lang-en">Page</text>
+    </div>
+    <textarea id="PsyPowers"></textarea>
+</div>
+
+<div>
+    <div id="SpecialPowersText">
+        <text class="lang lang-ua">Особливі здібності:</text>
+        <text class="lang lang-en">Special Abilities:</text>
+    </div>
+    <textarea id="SpecialPowers"></textarea>
+</div>
+
+<div>
+    <div id="EquipmentText">
+        <text class="lang lang-ua">Спорядження</text>
+        <text class="lang lang-en">Equipment</text>
+    </div>
+    <div id="EquipmentWeight">
+        <text class="lang lang-ua">Вага Сторінка</text>
+        <text class="lang lang-en">Weight Page</text>
+    </div>
+    <textarea id="Equipment"></textarea>
+</div>
+
+<div>
+    <div id="WeightText">
+        <text class="lang lang-ua">Макс.Вага(Б.Сил + Б.Вит):</text>
+        <text class="lang lang-en">Max Carry WT (SB+TB):</text>
+    </div>
+    <div id="WeightText1">
+        <text class="lang lang-ua">Носима вага:</text>
+        <text class="lang lang-en">Current Carry WT:</text>
+    </div>
+    <textarea id="Weight"></textarea>
+</div>
+</div>
+
+<script src="DH function.js"></script>
+
+</body>
+</html>
